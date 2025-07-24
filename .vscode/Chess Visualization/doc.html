@@ -3,22 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/chessboardjs@1.0.0/www/css/chessboard-1.0.0.min.css">
-  <script src="https://unpkg.com/chessboardjs@1.0.0/www/js/chessboard-1.0.0.min.js"></script>
   <title>Chess Visualization Trainer</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Chessboard.js styles -->
+  <link rel="stylesheet" href="https://unpkg.com/chessboardjs@1.0.0/www/css/chessboard-1.0.0.min.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Chess Visualization Practice</h1>
-    <div id="board"></div>
-    <div id="moves-container">
-      <p id="moves-display">Moves: e4, e5, Nf3</p>
-    </div>
-    <button id="start-btn">Start New Sequence</button>
-    <p id="instruction"></p>
+  <div class="app-container">
+    <header>
+      <h1>♟️ Chess Visualization Trainer</h1>
+      <p>Memorize a sequence of moves. Then play them from memory.</p>
+    </header>
+
+    <main>
+      <div id="board" class="chessboard"></div>
+
+      <div class="controls">
+        <p id="moves-display">Click "Start" to begin a new sequence.</p>
+        <button id="start-btn">▶️ Start New Sequence</button>
+        <p id="instruction"></p>
+      </div>
+    </main>
+
+    <footer>
+      <p>Made for improving chess memory and visualization skills.</p>
+    </footer>
   </div>
 
+  <!-- Chessboard.js -->
+  <script src="https://unpkg.com/chessboardjs@1.0.0/www/js/chessboard-1.0.0.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
