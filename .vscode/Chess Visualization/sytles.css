@@ -1,0 +1,33 @@
+body {
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#board {
+  width: 320px;
+  height: 320px;
+  margin: 20px auto;
+  background: #ddd;
+}
+
+#moves-display {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
