@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Visualization Training</title>
-    </head>
-    <body>
-        <div class="tm">
-        <header>
-            <p>Chess Visualization Trainer</p>
-        </header>
-        <div id="Start">
-            <button>Start</button>
-            <p>Improving chess calculation and Visualization</p>
-        </div>
-        </div>
-    </body>    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chess Visualization Trainer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Start Screen -->
+  <div class="tm" id="start-screen">
+    <header>
+      <p>Chess Visualization Trainer</p>
+    </header>
+    <div class="knight-icon">♞</div>
+    <div id="Start">
+      <button onclick="startTrainer()">Start</button>
+    </div>
+  </div>
+
+  <!-- Trainer Screen -->
+  <div class="trainer" id="trainer-screen" style="display: none;">
+    <div class="board-container">
+      <div class="chessboard">
+        <!-- 8 rows of 8 cells = 64 squares -->
+        <!-- Row 1 -->
+        <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+        <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+        <!-- Row 2 -->
+        <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+        <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+        <!-- Row 3 -->
+        <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+        <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+        <!-- Row 4 -->
+        <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+        <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+        <!-- Row 5 -->
+        <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+        <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+        <!-- Row 6 -->
+        <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+        <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+        <!-- Row 7 -->
+        <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+        <div class="cell white"></div><div class="cell black"></div><div class="cell white"></div><div class="cell black"></div>
+        <!-- Row 8 -->
+        <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+        <div class="cell black"></div><div class="cell white"></div><div class="cell black"></div><div class="cell white"></div>
+      </div>
+
+      <div class="notation" id="notation-box">
+        <p>e4, e5, Nf3, Nc6, Bb5</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- External Script -->
+  <script src="script.js"></script>
+</body>
 </html>

@@ -1,55 +1,100 @@
-/* Reset default margin/padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
-    background-color: #f4f4f4;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height */
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  flex-direction: column;
 }
 
-/* Trainer Module Container */
+/* Start screen styling */
 .tm {
-    background-color: #1e3a8a; /* Deep blue */
-    color: white;
-    text-align: center;
-    padding: 50px 40px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    width: 90%;
-    max-width: 500px;
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 50px 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
 }
 
-/* Header Styling */
 header p {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-/* Start Button */
+.knight-icon {
+  font-size: 64px;
+  margin-bottom: 30px;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 #Start button {
-    width: 140px;
-    height: 45px;
-    font-size: 16px;
-    background-color: #3b82f6; /* Sky blue */
-    border: none;
-    color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-    transition: all 0.3s ease;
+  width: 140px;
+  height: 45px;
+  font-size: 16px;
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 #Start button:hover {
-    background-color: #2563eb; /* Darker blue on hover */
-    transform: translateY(-2px);
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Trainer screen */
+.trainer {
+  padding: 20px;
+}
+
+.board-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  border: 4px solid #222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+}
+
+.white {
+  background-color: #f0d9b5;
+}
+
+.black {
+  background-color: #b58863;
+}
+
+.notation {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
