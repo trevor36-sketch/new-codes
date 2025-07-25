@@ -1,0 +1,55 @@
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+}
+
+/* Trainer Module Container */
+.tm {
+    background-color: #1e3a8a; /* Deep blue */
+    color: white;
+    text-align: center;
+    padding: 50px 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Header Styling */
+header p {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Start Button */
+#Start button {
+    width: 140px;
+    height: 45px;
+    font-size: 16px;
+    background-color: #3b82f6; /* Sky blue */
+    border: none;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#Start button:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
