@@ -1,0 +1,115 @@
+/* Reset + Base Styling */
+body {
+  background-color: plum;
+  font-family: 'Trebuchet MS', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Card Container */
+.win {
+  background-color: purple;
+  width: 90%;
+  max-width: 350px;
+  height: 250px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover Effect */
+.win:hover {
+  background-color: rgb(255, 3, 158);
+  transform: scale(1.05);
+}
+/* Headline Text */
+.B {
+  font-size: 2rem;
+  font-style: italic;
+  color: white;
+  margin-bottom: 10px;
+  animation: popIn 3s ease-out;
+}
+
+/* Message Text */
+.P {
+  font-size: 1rem;
+  color: lightyellow;
+  margin-bottom: 10px;
+  animation: slideIn 1.2s ease-out;
+}
+
+/* Party Line */
+.L::before {
+  content: "🥳 ";
+}
+
+.L {
+  font-size: 1.2rem;
+  color: lightcyan;
+  animation: floatIn 1.5s ease-out;
+}
+
+.V{
+    font-size: 20px;
+}
+
+/* Floating Emoji Confetti */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.floating-emoji {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: float 6s infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes floatIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  .win {
+    height: auto;
+    padding: 15px;
+  }
+
+  .B {
+    font-size: 1.5rem;
+  }
+
+  .P, .L {
+    font-size: 1rem;
+  }
+}
